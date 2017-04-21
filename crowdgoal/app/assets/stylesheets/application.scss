@@ -15,12 +15,17 @@
  *= require material_icons
  */
 @import "materialize/components/color";
-$primary-color: color("green", "lighten-2") !default;
+$primary-color: color("teal", "base") !default;
 $secondary-color: color("white", "base") !default;
 @import "materialize";
+@import "font-awesome";
 
 body {
   font-size: 14px;
+
+  .no-uppercase {
+    text-transform: none;
+  }
 
   .error-message {
     color: red;
@@ -29,8 +34,12 @@ body {
   .top-navbar{
     padding: 0 20px 0 20px;
     font-family: Helvetica, "Arial";
-    font-weight: thin;
+    font-weight: lighter;
     margin: auto;
+
+    li {
+      padding-right: 10px;
+    }
 
     #user-dropdown {
       position: inherit;

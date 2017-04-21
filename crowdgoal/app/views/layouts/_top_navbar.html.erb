@@ -3,10 +3,10 @@
     <a href="#" class="brand-logo">CrowdGoal</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <% if current_user %>
-        <li> <a class="dropdown-button" href="#!" data-activates="user-dropdown"> <%= "#{current_user.first_name} #{current_user.last_name}" %> <i class="material-icons right">arrow_drop_down</i> </a> </li>
-      <% else %>
-        <li><%= link_to register_path do %> Register <% end %></li>
-        <li><%= link_to login_path do %> Login <% end %></li>
+        <li> <a class="dropdown-button" href="#!" data-activates="user-dropdown"> <%= current_user.name %> <i class="material-icons right">arrow_drop_down</i> </a> </li>
+        <% else %>
+        <li><em> New to CrowdGoal? </em></li>
+        <li><strong><%= link_to register_path do %> Register <%end%></strong></li>
       <% end %>
     </ul>
   </div>
@@ -15,6 +15,6 @@
 <div id="user-dropdown" class="dropdown-content">
 <ul >
   <li><a href="#!">Settings</a></li>
-  <li><%= link_to logout_path do %> Logout <% end %></li>
+  <li>Logout</li>
 </ul>
 </div>

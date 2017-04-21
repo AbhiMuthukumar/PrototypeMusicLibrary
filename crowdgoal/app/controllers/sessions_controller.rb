@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     puts @user
     if @user && @user.authenticate(user_params["password"])
       session[:user_id] = @user.id
-      redirect_to '/'
+      redirect_to '/users/index'
     else
       render :new
     end

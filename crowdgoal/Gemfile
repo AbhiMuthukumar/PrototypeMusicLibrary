@@ -21,6 +21,11 @@ gem 'react-rails'
 gem 'materialize-sass'
 
 gem 'material_icons'
+gem 'font-awesome-rails'
+
+#devise gem for implementing facebook authentication
+gem 'devise'
+gem 'omniauth-facebook'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
