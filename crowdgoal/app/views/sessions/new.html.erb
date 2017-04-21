@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col s4">  </div>
+  <div class="col s4">  </div>
+  <div class="col s4">
+    <h4 class="left-align">Login</h4>
+    <%= form_for @user, url: '/login'  do |form| %>
+      <% if @user.errors.any? %>
+        <ul class="error-message">
+          <% @user.errors.full_messages.each do |error| %>
+            <li><%= error %></li>
+          <% end %>
+        </ul>
+      <% end %>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <%= form.email_field :email, class: 'validate' %>
+          <%= form.label :email do%> Email <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= form.password_field :password, class: 'validate' %>
+          <%= form.label :password do%> Password <% end %>
+        </div>
+      </div>
+      <center>
+        <%= form.submit 'Login', class: 'btn btn-medium center-align waves-effect waves-light' %>
+      </center>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
